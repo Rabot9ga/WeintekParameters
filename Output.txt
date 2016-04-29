@@ -1,0 +1,17 @@
+
+macro_command main()
+
+short LcParameterSetNumber, TempShort, ConstZero, TempOld
+bool ConstTrue, ConstFalse, TempBool
+
+ConstTrue  = true
+ConstFalse = false
+ConstZero  = 0
+
+GetData(LcParameterSetNumber, "Local HMI", "Parameter_Set_Number", 1)
+
+
+
+end if
+
+end macro_command

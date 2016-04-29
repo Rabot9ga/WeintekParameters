@@ -28,7 +28,6 @@ for line in open(fileName): # Использовать итератор файл
         enList.append(line[-2:-1])
 
 
-
 print (structsList)
 print (varList)
 print(enList)

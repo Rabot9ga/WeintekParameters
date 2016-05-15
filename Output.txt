@@ -11,6 +11,407 @@ ConstZero  = 0
 GetData(LcParameterSetNumber, "Local HMI", "Parameter_Set_Number", 1)
 
 
+if LcParameterSetNumber == 1 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT1.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT1.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT1.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT1.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT1.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT1.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "PT1.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT1.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT1.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT1.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT1.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else if LcParameterSetNumber == 2 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT2.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT2.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT2.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT2.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT2.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT2.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "PT2.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT2.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT2.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT2.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT2.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else if LcParameterSetNumber == 3 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT3.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT3.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT3.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT3.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT3.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT3.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "PT3.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT3.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT3.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT3.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT3.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else if LcParameterSetNumber == 4 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT4.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT4.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT4.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT4.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT4.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT4.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "PT4.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT4.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT4.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT4.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT4.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else if LcParameterSetNumber == 5 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT100.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT100.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT100.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT100.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT100.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT100.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "PT100.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT100.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "PT100.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "PT100.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "PT100.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else if LcParameterSetNumber == 6 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "P200.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "P200.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "P200.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "P200.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "P200.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "P200.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "P200.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "P200.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "P200.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "P200.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "P200.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else if LcParameterSetNumber == 7 then
+    GetData(TempOld, "Local HMI", "Sensor_Old_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "p123.HighLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "p123.HighLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_HighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_HighLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "p123.LowLimit", 1)
+    else
+        GetData(TempShort, "Local HMI", "p123.LowLimit", 1)
+        SetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    GetData(TempShort, "Local HMI", "Sensor_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_LowLimit", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "p123.ComOn", 1)
+    else
+        GetData(TempShort, "Local HMI", "p123.ComOn", 1)
+        SetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    GetData(TempShort, "Local HMI", "Sensor_ComOn", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_ComOn", 1)
+
+    GetData(TempShort, "Local HMI", "p123.AlarmHighLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_AlarmHighLimit", 1)
+
+    GetData(TempShort, "Local HMI", "p123.ALR_LowLimit", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ALR_LowLimit", 1)
+
+    GetData(TempShort, "Local HMI", "p123.ËÎÂÑ", 1)
+    SetData(TempShort, "Local HMI", "Sensor_ËÎÂÑ", 1)
+
+    GetData(TempOld, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    if 	(TempOld <> TempShort) then
+        SetData(TempShort, "Local HMI", "p123.JNdsckkfvdv", 1)
+    else
+        GetData(TempShort, "Local HMI", "p123.JNdsckkfvdv", 1)
+        SetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    GetData(TempShort, "Local HMI", "Sensor_JNdsckkfvdv", 1)
+    SetData(TempShort, "Local HMI", "Sensor_Old_JNdsckkfvdv", 1)
+
+else
+
+    SetData(ConstZero, "Local HMI", "PT1.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT1.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT1.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "PT1.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT1.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT1.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "PT1.JNdsckkfvdv", 1)
+    SetData(ConstZero, "Local HMI", "PT2.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT2.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT2.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "PT2.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT2.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT2.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "PT2.JNdsckkfvdv", 1)
+    SetData(ConstZero, "Local HMI", "PT3.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT3.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT3.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "PT3.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT3.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT3.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "PT3.JNdsckkfvdv", 1)
+    SetData(ConstZero, "Local HMI", "PT4.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT4.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT4.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "PT4.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT4.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT4.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "PT4.JNdsckkfvdv", 1)
+    SetData(ConstZero, "Local HMI", "PT100.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT100.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT100.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "PT100.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT100.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "PT100.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "PT100.JNdsckkfvdv", 1)
+    SetData(ConstZero, "Local HMI", "P200.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "P200.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "P200.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "P200.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "P200.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "P200.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "P200.JNdsckkfvdv", 1)
+    SetData(ConstZero, "Local HMI", "p123.HighLimit", 1)
+    SetData(ConstZero, "Local HMI", "p123.LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "p123.ComOn", 1)
+    SetData(ConstZero, "Local HMI", "p123.AlarmHighLimit", 1)
+    SetData(ConstZero, "Local HMI", "p123.ALR_LowLimit", 1)
+    SetData(ConstZero, "Local HMI", "p123.ËÎÂÑ", 1)
+    SetData(ConstZero, "Local HMI", "p123.JNdsckkfvdv", 1)
 
 end if
 

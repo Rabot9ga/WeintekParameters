@@ -38,7 +38,8 @@ startLB = sheet['F2'].value
 screenID = sheet['F3'].value
 varPrefix = sheet['F4'].value
 screenNameVar = sheet['F5'].value
-PLCName = sheet['F6'].value 
+PLCName = sheet['F6'].value
+StringTable_ID = sheet['F7'].value
 
 # Заполняем матрицу переменных
 varRow = []
@@ -119,6 +120,7 @@ for nameVar in varMatrix:
     row += 1
 
 wb.save(filename = dest_filename)
+
 
 startScript = """
 macro_command main()
@@ -218,7 +220,37 @@ for j in structList:
 
 outputFile.close()
 
+inputFile = 'StringTable.xlsx'
+wb = load_workbook(filename = inputFile)
+ws = wb.active
+
+row = 2
+col = 1
+cell = get_column_letter(col) + str(row)
+while str(ws[cell].value) != 'None' and row < 1000:
+#    print(sheet[cell].value)
+    row = row + 1
+    cell = get_column_letter(col) + str(row)
+
+
+col = 1
+index = 0
+for screenName in screenList:
+    cell = get_column_letter(col) + str(row)
+    ws[cell] = str(StringTable_ID)
+    cell = get_column_letter(col + 1) + str(row)
+    ws[cell] = varPrefix.replace('.','')
+    cell = get_column_letter(col + 2) + str(row)
+    ws[cell] = str(index)
+    index += 1
+    cell = get_column_letter(col + 3) + str(row)
+    ws[cell] = str(screenName)
+    row += 1
+
+wb.save(filename = inputFile)
+
 print('Создан файл импорта переменных в Weintek "' + dest_filename + '"')
 print('Создан файл макроса для Weintek "' + codeFileName + '"')
+print('Создан файл импорта таблиц строк в Weintek "' + inputFile + '"')
 print('\n')
 input('Press any key...')

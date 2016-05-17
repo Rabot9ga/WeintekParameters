@@ -144,9 +144,9 @@ if inputDataFlag == 1 and stringTableFlag == 1:
     startScript = """
     macro_command main()
 
-    short LcParameterSetNumber, TempShort, TempOldShort, ConstZero
-    unsigned int TempInt, TempOldInt, ConstIntZero
-    bool ConstTrue, ConstFalse, TempBool, TempOldBool
+    short           TempShort, TempShort2, TempOldShort, ConstZero, LcParameterSetNumber
+    unsigned int    TempInt,   TempInt2,   TempOldInt,   ConstIntZero
+    bool            TempBool,  TempBool2,  TempOldBool,  ConstTrue, ConstFalse
 
     char ScreenName[20] = ""
 
@@ -186,35 +186,32 @@ if inputDataFlag == 1 and stringTableFlag == 1:
                     str3 = '    if 	(TempOldBool <> TempBool) then\n'
                     str4 = '        SetData(TempBool, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
                     str5 = '    else\n'
-                    str6 = '        GetData(TempBool, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
-                    str7 = '        SetData(TempBool, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
+                    str6 = '        GetData(TempBool2, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
+                    str7 = '        SetData(TempBool2, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
                     str8 = '    end if\n'
-                    str9 = '    GetData(TempBool, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
-                    str10 = '    SetData(TempBool, "Local HMI", "' + varPrefix + 'Old_' + i[0] + '", 1)\n'
+                    str9 = '    SetData(TempBool, "Local HMI", "' + varPrefix + 'Old_' + i[0] + '", 1)\n'
                 if i[1] == 2:
                     str1 = '    GetData(TempOldShort, "Local HMI", "' + varPrefix + 'Old_' + i[0] + '", 1)\n'
                     str2 = '    GetData(TempShort, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
                     str3 = '    if 	(TempOldShort <> TempShort) then\n'
                     str4 = '        SetData(TempShort, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
                     str5 = '    else\n'
-                    str6 = '        GetData(TempShort, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
-                    str7 = '        SetData(TempShort, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
+                    str6 = '        GetData(TempShort2, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
+                    str7 = '        SetData(TempShort2, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
                     str8 = '    end if\n'
-                    str9 = '    GetData(TempShort, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
-                    str10 = '    SetData(TempShort, "Local HMI", "' + varPrefix + 'Old_' + i[0] + '", 1)\n'
+                    str9 = '    SetData(TempShort, "Local HMI", "' + varPrefix + 'Old_' + i[0] + '", 1)\n'
                 if i[1] == 3:
                     str1 = '    GetData(TempOldInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 2)\n'
                     str2 = '    GetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
                     str3 = '    if 	(TempOldInt <> TempInt) then\n'
                     str4 = '        SetData(TempInt, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 2)\n'
                     str5 = '    else\n'
-                    str6 = '        GetData(TempInt, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 2)\n'
-                    str7 = '        SetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
+                    str6 = '        GetData(TempInt2, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 2)\n'
+                    str7 = '        SetData(TempInt2, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
                     str8 = '    end if\n'
-                    str9 = '    GetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
-                    str10 = '    SetData(TempInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 2)\n'
-                print(str1+str2+str3+str4+str5+str6+str7+str8+str9+str10)
-                outputFile.write(str1+str2+str3+str4+str5+str6+str7+str8+str9+str10+'\n')
+                    str9 = '    SetData(TempInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 2)\n'
+                print(str1+str2+str3+str4+str5+str6+str7+str8+str9)
+                outputFile.write(str1+str2+str3+str4+str5+str6+str7+str8+str9+'\n')
             else:
                 if i[1] == 1:
                     str1 = '    GetData(TempBool, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'

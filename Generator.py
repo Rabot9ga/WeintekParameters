@@ -16,11 +16,9 @@ for nameFile in listdir("."):
 
 if inputDataFlag == 0:
     print('Отстутсвует файл InputData.xlsx')
-if stringTableFlag == 0:
-    print('Отстутсвует файл StringTable.xlsx')
 
 
-if inputDataFlag == 1 and stringTableFlag == 1:
+if inputDataFlag == 1:
     inputFile = 'InputData.xlsx'
     wb = load_workbook(filename = inputFile)
     sheet = wb['Vars']
@@ -240,9 +238,23 @@ if inputDataFlag == 1 and stringTableFlag == 1:
     outputFile.close()
 
     inputFile = 'StringTable.xlsx'
-
-    wb = load_workbook(filename = inputFile)
-    ws = wb.active
+    try:
+        wb = load_workbook(filename = inputFile)
+        ws = wb.active
+    except:
+        wb = Workbook()
+        ws = wb.active
+        ws['A1'] = 'ID раздела'
+        ws['B1'] = 'Описание'
+        ws['C1'] = 'Номер строки'
+        ws['D1'] = 'язык 1'
+        ws['E1'] = 'язык 2'
+        ws['F1'] = 'язык 3'
+        ws['G1'] = 'язык 4'
+        ws['H1'] = 'язык 5'
+        ws['I1'] = 'язык 6'
+        ws['J1'] = 'язык 7'
+        ws['K1'] = 'язык 8'
 
     row = 2
     col = 1

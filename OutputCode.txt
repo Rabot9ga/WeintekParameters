@@ -1,18 +1,18 @@
 
-macro_command main()
+    macro_command main()
 
-short LcParameterSetNumber, TempShort, TempOldShort, ConstZero
-unsigned int TempInt, TempOldInt, ConstIntZero
-bool ConstTrue, ConstFalse, TempBool, TempOldBool
+    short LcParameterSetNumber, TempShort, TempOldShort, ConstZero
+    unsigned int TempInt, TempOldInt, ConstIntZero
+    bool ConstTrue, ConstFalse, TempBool, TempOldBool
 
-char ScreenName[20] = ""
+    char ScreenName[20] = ""
 
 
-ConstTrue  = true
-ConstFalse = false
-ConstZero  = 0
+    ConstTrue  = true
+    ConstFalse = false
+    ConstZero  = 0
 
-GetData(LcParameterSetNumber, "Local HMI", "Parameter_Set_Number", 1)
+    GetData(LcParameterSetNumber, "Local HMI", "Parameter_Set_Number", 1)
 if LcParameterSetNumber == 1 then
     StringCopy("Carbo_AG_2", ScreenName[0])
     StringSet(ScreenName[0], "Local HMI", "ScreenNameString", 20)

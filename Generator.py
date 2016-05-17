@@ -175,9 +175,9 @@ if inputDataFlag == 1 and stringTableFlag == 1:
             str1 = 'else if LcParameterSetNumber == ' + str(currStructNumber + 1) + ' then\n'
             print(str1)
 
-        str2 = '    StringCopy("' + screenList[currStructNumber] + '", ScreenName[0])\n'
-        str3 = '    StringSet(ScreenName[0], "Local HMI", "' + screenNameVar + '", 20)\n'
-        outputFile.write(str1 + str2 + str3 + '\n')
+        #str2 = '    StringCopy("' + screenList[currStructNumber] + '", ScreenName[0])\n'
+        #str3 = '    StringSet(ScreenName[0], "Local HMI", "' + screenNameVar + '", 20)\n'
+        outputFile.write(str1 + '\n')
         for i in varMatrix:
             if i[2] == 1:
                 if i[1] == 1:
@@ -203,16 +203,16 @@ if inputDataFlag == 1 and stringTableFlag == 1:
                     str9 = '    GetData(TempShort, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
                     str10 = '    SetData(TempShort, "Local HMI", "' + varPrefix + 'Old_' + i[0] + '", 1)\n'
                 if i[1] == 3:
-                    str1 = '    GetData(TempOldInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 1)\n'
-                    str2 = '    GetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 1)\n'
+                    str1 = '    GetData(TempOldInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 2)\n'
+                    str2 = '    GetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
                     str3 = '    if 	(TempOldInt <> TempInt) then\n'
-                    str4 = '        SetData(TempInt, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 1)\n'
+                    str4 = '        SetData(TempInt, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 2)\n'
                     str5 = '    else\n'
-                    str6 = '        GetData(TempInt, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 1)\n'
-                    str7 = '        SetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 1)\n'
+                    str6 = '        GetData(TempInt, "' + PLCName + '", "'+ structList[currStructNumber] + '.' + i[0] + '", 2)\n'
+                    str7 = '        SetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
                     str8 = '    end if\n'
-                    str9 = '    GetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 1)\n'
-                    str10 = '    SetData(TempInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 1)\n'
+                    str9 = '    GetData(TempInt, "Local HMI", "'+ varPrefix + i[0] + '", 2)\n'
+                    str10 = '    SetData(TempInt, "Local HMI", "'+ varPrefix + 'Old_' + i[0] + '", 2)\n'
                 print(str1+str2+str3+str4+str5+str6+str7+str8+str9+str10)
                 outputFile.write(str1+str2+str3+str4+str5+str6+str7+str8+str9+str10+'\n')
             else:
@@ -223,8 +223,8 @@ if inputDataFlag == 1 and stringTableFlag == 1:
                     str1 = '    GetData(TempShort, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
                     str2 = '    SetData(TempShort, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
                 if i[1] == 3:
-                    str1 = '    GetData(TempInt, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 1)\n'
-                    str2 = '    SetData(TempInt, "Local HMI", "' + varPrefix + i[0] + '", 1)\n'
+                    str1 = '    GetData(TempInt, "' + PLCName + '", "' + structList[currStructNumber] + '.' + i[0] + '", 2)\n'
+                    str2 = '    SetData(TempInt, "Local HMI", "' + varPrefix + i[0] + '", 2)\n'
                 print(str1+str2)
                 outputFile.write(str1+str2+'\n')
             print(i)

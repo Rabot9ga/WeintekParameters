@@ -7,5 +7,6 @@
 .idea/WeintekParameters.iml
 ~$InputData.xlsx
 ~$Var.xlsx
-StringTable.xlsx
+StringTable.xls
+OutputVar.xlsx
 OutputCode.txt

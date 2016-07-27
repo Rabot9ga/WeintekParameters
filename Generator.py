@@ -263,7 +263,7 @@ if inputDataFlag == 1:
 
 
     col = 1
-    index = 0
+    index = 1
     for screenName in screenList:
         cell = get_column_letter(col) + str(row)
         ws[cell] = str(StringTable_ID)
